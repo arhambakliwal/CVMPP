@@ -1,0 +1,23 @@
+//Example 2
+//program to check if a number is in a given range
+
+int low;
+int high;
+int x;
+bool in_range;
+
+low=input();
+high=input();
+x=input();
+
+if(x>=low && x<=high)
+{
+      in_range = true;
+}
+else
+{
+      in_range=false;
+}
+
+//printing whether the number is between low and high
+print(in_range);

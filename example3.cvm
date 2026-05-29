@@ -1,0 +1,20 @@
+//Example 3
+// program to calculate average of n numbers
+
+int n;
+int sum;
+int i;
+int x;
+
+sum=i=0;
+n=input();
+
+while(i<n)
+{
+      x=input();
+      sum=sum+x;
+      i=i+1;
+}
+
+//printing the average of the numbers
+print(sum/n);

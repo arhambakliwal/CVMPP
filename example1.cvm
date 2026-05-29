@@ -1,0 +1,27 @@
+//Example 1
+//Program for a simple number guessing game
+
+int number;
+int guess;
+int attempts;
+
+number=34;
+attempts=1;
+guess=input();
+
+while(guess!=number)
+{
+      if(guess<number)
+      {
+            print(-1); //guess is lower than the number
+      }
+      else
+      {
+            print(1); //guess is higher than the number
+      }
+      guess=input();
+      attempts=attempts+1;
+}
+
+print(2); //correct number guessed
+print(attempts); //number of attempts taken

@@ -1,0 +1,21 @@
+//Example 4
+//program to check whether a number  is divisible by 2 or three or both
+
+int x;
+x=input();
+if(x%2==0)
+{
+      print(2);//divisible by 2
+      if(x%3==0)//divisible by both 2 and 3
+      {
+            print(3);
+      }
+}
+else if(x%3==0)//divisible by only 3
+{
+      print(3);
+}
+else //divisible by neither 2 nor 3
+{
+      print(0);
+}
