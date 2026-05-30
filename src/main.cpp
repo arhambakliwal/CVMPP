@@ -5,6 +5,7 @@
 #include "../include/ByteCodeCompiler.h"
 #include "../include/VirtualMachine.h"
 #include <fstream>
+#include <algorithm>
 
 int main(int argc, char* argv[])
 {
