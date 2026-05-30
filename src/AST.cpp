@@ -36,7 +36,7 @@ IfStmt::IfStmt(int line_no, Expr* cond, Stmt* If, Stmt* Else):Stmt(line_no), con
 
 WhileStmt::WhileStmt(int line_no, Expr* cond, Stmt* body):Stmt(line_no), condition(cond), body(body) {}
 
-BlockStmt::BlockStmt(int line_no, std::vector<Stmt*> blk):Stmt(line_no), block(blk) {}
+BlockStmt::BlockStmt(int line_no, const std::vector<Stmt*>& blk):Stmt(line_no), block(blk) {}
 
 void DeclarationStmt::print()
 {

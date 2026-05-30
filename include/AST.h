@@ -94,7 +94,7 @@ struct IfStmt:public Stmt
 struct BlockStmt:public Stmt
 {
       std::vector<Stmt*> block;
-      BlockStmt(int, std::vector<Stmt*>);
+      BlockStmt(int, const std::vector<Stmt*>&);
       void print() override;
       ~BlockStmt();
 };

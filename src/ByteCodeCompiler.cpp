@@ -250,7 +250,7 @@ void ByteCodeCompiler::compileStmt(Stmt* stmt)
       }
 }
 
-int ByteCodeCompiler::getMemorySize()
+int ByteCodeCompiler::getMemorySize() const
 {
       return maxSlot+1;
 }

@@ -15,7 +15,7 @@ class ByteCodeCompiler
             int lookupVar(const std::string& name) const;
             int maxSlot;
       public:
-            int getMemorySize();
+            int getMemorySize() const;
             ByteCodeCompiler();
             std::vector<Instruction> compile(const std::vector<Stmt*>&);
 };
