@@ -4,9 +4,8 @@
 #include "../include/SemanticAnalyzer.h"
 #include "../include/ByteCodeCompiler.h"
 #include "../include/VirtualMachine.h"
-
 #include <fstream>
-using namespace std;
+
 int main(int argc, char* argv[])
 {
       size_t i;
@@ -45,12 +44,12 @@ int main(int argc, char* argv[])
       program=p.ParseProgram();
       if(debug)
       {
-            cout<<"AST\n";
+            std::cout<<"AST\n";
             for(i=0; i<program.size(); i++)
             {
                   program[i]->print();
             }
-            cout<<"----------------------------------------\n";
+            std::cout<<"----------------------------------------\n";
       }
       // Semantic Analysis
       SemanticAnalyzer analyzer;
@@ -60,13 +59,14 @@ int main(int argc, char* argv[])
       bytecode=bcc.compile(program);
       if(debug)
       {
-            cout<<"Byte Code\n";
+            std::cout<<"Byte Code\n";
             for(i=0; i<bytecode.size(); i++)
             {
-                  cout<<i<<". "<<bytecode[i]<<endl;
+                  std::cout<<i<<". "<<bytecode[i]<<std::endl;
             }
-            cout<<"----------------------------------------\n";
+            std::cout<<"----------------------------------------\n";
       }
+
       // Execution
       VirtualMachine cvm(bytecode, bcc.getMemorySize());
       cvm.run();

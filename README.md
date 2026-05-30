@@ -60,6 +60,13 @@ make clean
 ```bash
 ./compiler program.cvm
 ```
+### Optional Debug Mode
+
+```bash
+./compiler <file_name> 1
+```
+Passing `1` as the second argument enables debug mode, in which the generated Abstract Syntax Tree and Bytecode are printed before execution.
+
 ---
 
 ## Project Structure
